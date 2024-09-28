@@ -1,0 +1,178 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 8vh 10vw;
+    gap: 40px;
+    background-color: #0E1B1F;
+    margin-top: 0vh;
+    z-index: 2;
+
+    .contactDiv {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        text-align: start;
+        z-index: 1;
+        position: relative;
+
+        .left {
+            h1 {
+                font-size: 25px;
+                letter-spacing: 0.05rem;
+            }
+
+        }
+
+        .right {
+            button {
+                background-color: #fff;
+                color: #0E1B1F;
+                font-weight: 500;
+                padding: 8px 16px;
+                border-radius: 40px;
+                width: max-content;
+            }
+        }
+
+        @media screen and (max-width: "799px") {
+            gap: 4vw;
+            
+            .left {
+                h1{
+                    font-size: 18px;
+                    width: fit-content;
+                }
+            }
+
+            .right {
+                button{
+                    padding: 5px 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .footerDiv {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        color: #fff;
+        column-gap: 5vw;
+        row-gap: 30px;
+        justify-content: space-between;
+
+        .col {
+            max-width: 200px;
+
+            .picture {
+                width: 100%;
+                height: 60px;
+                position: relative;
+                background: #fff;
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .info {
+                width: fit-content;
+                font-size: 12px;
+                font-weight: 400;
+                margin: 20px 0;
+                text-align: start;
+                line-height: 1;
+            }
+
+            .heading {
+                font-size: 20px;
+                color: #F36E21;
+            }
+
+            ul {
+                margin: 5px 0;
+
+                li {
+                    padding: 7px 0;
+                    font-size: 16px;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        transform: rotate(90deg);
+                        position: absolute;
+                        top: 40%;
+                        left: -20px;
+                        width: 2px;
+                        height: 2px;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-bottom: 10px solid #F36E21;
+                    }
+                }
+
+                .contactItem {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+
+            .icons {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 20px 0;
+                gap: 10px;
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: "1079px") {
+            grid-template-columns: auto auto auto;
+        }
+
+        @media screen and (max-width: "799px") {
+            grid-template-columns: auto auto;
+
+            .col {
+                max-width: 40vw;
+            }
+        }
+
+        @media screen and (max-width: "616px") {
+            .col {
+                max-width: 30vw;
+            }
+        }
+
+        @media screen and (max-width: "476px") {
+            grid-template-columns: auto;
+
+            .col {
+                max-width: 80vw;
+            }
+        }
+    }
+
+    .cc {
+        color: #fff;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        span{
+            color: #F36E21;
+        }
+    }
+}

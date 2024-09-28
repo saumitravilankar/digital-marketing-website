@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background: linear-gradient(45deg, rgba(237, 253, 255, 0.863), rgba(255, 255, 252, 0.897)),url("../public/assets/images/background.png");
+  background-size: contain;
+  background-repeat: repeat;
+  position: relative;  
+}
+

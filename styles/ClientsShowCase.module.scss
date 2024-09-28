@@ -1,0 +1,324 @@
+.container {
+  width: 100%;
+  padding: 10vh 0 0 0;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0 0 0;
+    font-size: 4rem;
+    -webkit-text-fill-color: #353638;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+
+    span {
+      font-weight: 400;
+      -webkit-text-fill-color: #ff6700;
+      margin: 0 20px;
+    }
+
+    @media screen and (max-width: "743px") {
+      font-size: 3.5rem;
+    }
+
+    @media screen and (max-width: "615px") {
+      font-size: 3rem;
+      letter-spacing: normal;
+
+      span{
+        margin: 0 10px;
+      }
+    }
+    @media screen and (max-width: "500px") {
+      font-size: 2.5rem;
+    }
+    @media screen and (max-width: "400px") {
+      font-size: 2rem;
+      span{
+        margin: 0 5px;
+      }
+    }
+    @media screen and (max-width: "300px") {
+      font-size: 1.5rem;
+      span{
+        margin: 0 5px;
+      }
+    }
+  }
+
+  .clients {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0;
+
+    .client {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+      width: 400px;
+      gap: 10px;
+
+      .picture {
+        width: 50%;
+        height: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+
+        img {
+          position: absolute;
+          border-radius: 50%;
+          mix-blend-mode: normal;
+          border: none;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3px;
+        text-align: center;
+        width: 60%;
+        height: 150px;
+        z-index: 0;
+        position: relative;
+
+        .name {
+          font-size: 22px;
+          font-weight: 600;
+          letter-spacing: 0.05rem;
+        }
+
+        .post {
+          font-size: 18px;
+        }
+      }
+
+      &:nth-child(1) {
+        border-bottom: 0.5px solid #000;
+        border-right: 0.5px solid #000;
+      }
+
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(5) {
+        border-bottom: 0.5px solid #000;
+        border-right: 0.5px solid #000;
+      }
+
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(3),
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9) {
+        border-bottom: 0.5px solid #000;
+      }
+
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(10) {
+        border-right: 0.5px solid #000;
+      }
+
+      &:nth-child(11) {
+        border-right: 0.5px solid #000;
+      }
+    }
+
+    @media screen and (max-width: "1230px") {
+      grid-template-columns: auto auto;
+
+      .client {
+
+        &:nth-child(1),
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(7),
+        &:nth-child(9),
+        &:nth-child(11) {
+          border-right: 1px solid #bbb;
+          border-left: none;
+        }
+
+        &:nth-child(1),
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(7),
+        &:nth-child(9) {
+          border-bottom: 1px solid #bbb;
+          border-top: none;
+        }
+
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(6),
+        &:nth-child(8),
+        &:nth-child(10) {
+          border-bottom: 1px solid #bbb;
+          border-top: none;
+          border-right: none;
+        }
+      }
+
+      .info {
+        justify-content: center;
+        width: 80%;
+      }
+    }
+
+    @media screen and (max-width: "817px") {
+
+      .client {
+        width: 350px;
+        height: 350px;
+        padding-top: 20px;
+
+        .info {
+          justify-content: center;
+          width: 80%;
+
+          .name {
+            font-size: 20px;
+          }
+
+          .post {
+            font-size: 15px;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: "716px") {
+
+      .client {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    @media screen and (max-width: "605px") {
+
+      .client {
+        width: 280px;
+        height: 280px;
+
+        .info{
+
+          .name{
+            font-size: 16px;
+          }
+          .post{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: "565px") {
+      grid-template-columns: auto;
+
+      .client{
+        width: 450px;
+        height: 450px;
+
+        .info{
+
+          .name{
+            font-size: 2rem;
+          }
+          .post{
+            font-size: 16px;
+          }
+        }
+
+        &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8),&:nth-child(9),&:nth-child(10),&:nth-child(11){
+          border-bottom: 1px solid #bbb;
+          border-right: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: "500px") {
+      padding: 5vh 0;
+
+      .client{
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    @media screen and (max-width: "400px") {
+      padding: 5vh 0;
+
+      .client{
+        width: 350px;
+        height: 350px;
+
+        .info{
+
+          .name{
+            font-size: 1.5rem;
+          }
+          .post{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: "350px") {
+      padding: 5vh 0;
+
+      .client{
+        width: 300px;
+        height: 300px;
+
+        .info{
+
+          .name{
+            font-size: 1.2rem;
+          }
+          .post{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: "300px") {
+      padding: 4vh 0;
+
+      .client{
+        width: 260px;
+        height: 260px;
+
+        .info{
+
+          .name{
+            font-size: 1.2rem;
+          }
+          .post{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: "820px") {
+    padding: 0;
+  }
+}

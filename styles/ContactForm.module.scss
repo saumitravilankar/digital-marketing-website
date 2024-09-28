@@ -1,0 +1,234 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .subContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 125, 38);
+    background: linear-gradient(0deg,
+        rgba(255, 125, 38, 1) 0%,
+        rgba(255, 161, 97, 1) 100%);
+
+    .contactformbox {
+      flex: 1;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 5vw;
+
+      .titleMain {
+        font-size: 3rem;
+        font-weight: 600;
+        color: #353638;
+        line-height: 1;
+
+        span {
+          font-weight: 400;
+          position: relative;
+        }
+      }
+
+      .form {
+        padding: 3vh 0;
+
+        input {
+          padding: 15px 20px;
+          width: 100%;
+          margin: 10px 0;
+          border: 1px solid #353638;
+          border-radius: 10px;
+        }
+
+        .name {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          gap: 10px;
+
+          .first {
+            flex: 1;
+          }
+
+          .last {
+            flex: 1;
+          }
+        }
+
+        .submit {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          input {
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            font-weight: 600;
+            font-size: 19px;
+            background: #fff;
+            border: 1px solid #000;
+            color: #353638;
+          }
+        }
+      }
+    }
+
+    .addressContainer {
+      background: #353638;
+      color: #fff;
+      z-index: 2;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      height: 100vh;
+      border: 1px solid #000;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+
+      .top {
+        flex: 2;
+      }
+
+      .bottom {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+          font-size: 3rem;
+          font-weight: 600;
+          text-transform: capitalize;
+
+          span {
+            font-weight: 400;
+            position: relative;
+          }
+        }
+
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: "1080px") {
+      .contactformbox {
+        .titleMain {
+          font-size: 2.5rem;
+        }
+      }
+
+      .addressContainer {
+
+        .bottom {
+
+          h1 {
+            font-size: 2.5rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: "850px") {
+
+      .contactformbox {
+        gap: 20px;
+
+        .titleMain {
+          font-size: 2rem;
+        }
+
+        .form {
+
+          input {
+            padding: 8px 15px;
+          }
+        }
+      }
+
+      .addressContainer {
+        .bottom {
+          h1 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: "700px") {
+      flex-direction: column;
+
+      .contactformbox {
+        padding: 5vh 5vw;
+      }
+
+      .addressContainer {
+        .bottom {
+          padding: 30px 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: "420px") {
+
+      .contactformbox {
+        padding: 5vh 5vw;
+
+        .titleMain {
+          font-size: 1.5rem;
+        }
+        
+      }
+    }
+
+    @media screen and (max-width: "300px") {
+
+      .contactformbox {
+        padding: 5vh 5vw;
+
+        .titleMain {
+          font-size: 1.5rem;
+        }
+        
+        .form {
+
+          input {
+            padding: 7px 15px;
+            font-size: 10px;
+            margin: 5px 0;
+          }
+
+          .submit{
+            input{
+              font-size: 13px;
+              width: fit-content;
+            }
+          }
+        }
+      }
+    }
+  }
+}

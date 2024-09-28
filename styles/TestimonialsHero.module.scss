@@ -1,0 +1,371 @@
+.container{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: #FFDEDE;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 1px 3px #ff0000;
+
+    .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex: 1;
+        height: 100%;
+        min-height: 100vh;
+        z-index: 1;
+        position: relative;
+
+        .title{
+            font-size: 4rem;
+            letter-spacing: 0.1rem;
+            padding: 0 5vw;
+            text-transform: uppercase;
+            -webkit-text-fill-color: rgb(255, 255, 255);
+            text-shadow: 1px 1px 3px #ff0000;
+            line-height: 1;
+        }
+
+        .tagline{
+            color: #018e9b;
+            text-shadow: 0.5px 0.5px 1px #ffffff;
+            background: #fff;
+            font-weight: 600;
+            text-transform: uppercase;
+            width: max-content;
+            padding: 2px 5px 2px 5px;
+            border-radius: 5px;
+            margin: 0 5vw;
+        }
+
+        .points{    
+            padding: 0 5vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 2vh;
+
+            .point{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 3vw;
+
+                .blockOne{
+                    width: 10px;
+                    min-height: 100%;
+                    background-color: #f86c6c;
+                    box-shadow: 1px 1px 1px #ff0000;
+                }
+
+                .blockTwo{
+                    width: 10px;
+                    min-height: 100%;
+                    background-color: #f86c6c;
+                    box-shadow: 1px 1px 1px #ff0000;
+                }
+
+                .blockThree{
+                    width: 10px;
+                    min-height: 100%;
+                    background-color: #f86c6c;
+                    box-shadow: 1px 1px 1px #ff0000;
+                }
+
+                .corp{
+                    font-size: 4rem;
+                    font-weight: 800;
+                    position: relative;
+                    cursor: pointer;
+                    color: #f86c6c;
+                    text-shadow: 0.5px 0.5px 1px #ff0000;
+                    
+                    &::before{
+                        content: "CORPORATE";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        font-size: 4rem;
+                        width: 0%;
+                        color: #018e9b;
+                        text-shadow: 0.5px 0.5px 2px  #000;
+                        overflow: hidden;
+                        transition: all 1s ease;
+                    }
+                }
+
+                .poli{
+                    font-size: 4rem;
+                    font-weight: 800;
+                    position: relative;
+                    cursor: pointer;
+                    color: #f86c6c;
+                    text-shadow: 0.5px 0.5px 1px #ff0000;
+                    
+                    &::before{
+                        content: "POLITICAL";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        font-size: 4rem;
+                        width: 0%;
+                        color: #018e9b;
+                        text-shadow: 0.5px 0.5px 2px  #000;
+                        overflow: hidden;
+                        transition: all 1s ease;
+                    }
+                }
+
+                .eve{
+                    font-size: 4rem;
+                    font-weight: 800;
+                    position: relative;
+                    cursor: pointer;
+                    color: #f86c6c;
+                    text-shadow: 0.5px 0.5px 1px #ff0000;
+                    
+                    &::before{
+                        content: "EVENTS";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        font-size: 4rem;
+                        width: 0%;
+                        color: #018e9b;
+                        text-shadow: 0.5px 0.5px 2px  #000;
+                        overflow: hidden;
+                        transition: all 1s ease;
+                    }
+                }
+
+                .arrow{
+                    display: none;
+                }
+
+                &:hover{
+                    .blockOne{
+                        background-color: #018e9b;
+                        box-shadow: 1px 1px 1px #000;
+                    }
+                    .blockTwo{
+                        background-color: #018e9b;
+                        box-shadow: 1px 1px 1px #000;
+                    }
+                    .blockThree{
+                        background-color: #018e9b;
+                        box-shadow: 1px 1px 1px #000;
+                    }
+
+                    .arrow{
+                        display: block;
+                        font-size: 2rem;
+                        color: #f86c6c;
+                        text-shadow: 1px 1px 3px #ff0000;
+                    }
+
+                    .corp::before{
+                        width: 100%;
+                    }
+                    .poli::before{
+                        width: 100%;
+                    }
+                    .eve::before{
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .right{
+        flex: 1;
+        height: 100%;
+        min-height: 100vh;
+        z-index: 1;
+        position: relative;
+
+        .rightContainer{
+            display: grid;
+            grid-template-columns: auto;
+            height: 100%;
+            padding: 10vh 2vw 3vh 2vw;
+            row-gap: 50px;
+
+            .row{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 30px;
+            }
+        }
+
+        .cardDivOne{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            
+            .card{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                transition: all 1s ease;
+                box-shadow: 1px 1px 3px #ff0000;
+                border-radius: 10px;
+                
+                .front{
+                    border: 1px solid #f86c6c;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    backface-visibility: hidden;
+                    background: rgb(255,233,120);
+                    background: linear-gradient(310deg, rgb(255,176,102) 0%, rgb(255,134,123) 100%);
+                    color: #fff;
+                    border-radius: 10px;  
+                    padding: 20px 3vw;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;              
+                    text-align: center;
+                }
+
+                .back{
+                    border: 1px solid #018e9b;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    backface-visibility: hidden;
+                    background-color: #C9FCFC;
+                    color: #000;
+                    border-radius: 10px; 
+                    padding: 20px 3vw;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;               
+                    text-align: center;
+                    transform: rotateY(180deg);
+                }
+            }
+            
+            &:hover{
+                
+                .card{
+                    transform: rotateY(180deg);
+                    box-shadow: 1px 1px 3px #018e9b;
+                }
+            }
+        }
+
+        .cardDivTwo{
+            width: 250px;
+            height: 300px;
+            position: relative;
+            
+            .card{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                transition: all 1s ease;
+                box-shadow: 1px 1px 3px #ff0000;
+                border-radius: 10px;
+                
+                .front{
+                    border: 1px solid #f86c6c;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    backface-visibility: hidden;
+                    background: #fff;
+                    color: #333;
+                    border-radius: 10px;  
+                    padding: 20px 3vw;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;              
+                    text-align: center;
+                }
+
+                .back{
+                    border: 1px solid #018e9b;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    backface-visibility: hidden;
+                    background-color: #C9FCFC;
+                    color: #000;
+                    border-radius: 10px; 
+                    padding: 20px 3vw;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;               
+                    text-align: center;
+                    transform: rotateY(180deg);
+                }
+            }
+
+            &:hover{
+                
+                .card{
+                    transform: rotateY(180deg);
+                    box-shadow: 1px 1px 3px #018e9b;
+                }
+            }
+        }
+    }
+
+    .circle{
+        position: absolute;
+        top: 16%;
+        left: -5%;
+        min-width: 360px;
+        min-height: 360px;
+        background: rgb(155,205,210);
+        background: linear-gradient(92deg, rgba(155,205,210,0.7) 0%, rgba(255,255,255,1) 100%);
+        border-radius: 50%;
+        z-index: 0;
+        box-shadow: -0.2px 0.2px 1px #000;
+    }
+    .circle2{
+        position: absolute;
+        bottom: 5%;
+        left: 36%;
+        right: auto;
+        min-width: 200px;
+        min-height: 200px;
+        background: rgb(248,108,108);
+        background: linear-gradient(to top, rgba(248,108,108,0.7) 0%, rgba(255,255,255,1) 100%);
+        border-radius: 50%;
+        z-index: 0;
+        box-shadow: 0.2px -0.2px 1px #000;
+    }
+    .circle3{
+        position: absolute;
+        top: 22%;
+        right: 38%;
+        left: auto;
+        min-width: 200px;
+        min-height: 200px;
+        background: rgb(155,205,210);
+        background: linear-gradient(42deg, rgba(155,205,210,0.7) 0%, rgba(255,255,255,1) 100%);
+        border-radius: 50%;
+        z-index: 0;
+        box-shadow: 0.2px -0.2px 1px #000;
+    }
+    .circle4{
+        position: absolute;
+        bottom: 30%;
+        right: 10%;
+        left: auto;
+        min-width: 200px;
+        min-height: 200px;
+        background: rgb(248,108,108);
+        background: linear-gradient(to top, rgba(248,108,108,0.7) 0%, rgba(255,255,255,1) 100%);
+        border-radius: 50%;
+        z-index: 0;
+        box-shadow: 0.2px -0.2px 1px #000;
+    }
+}

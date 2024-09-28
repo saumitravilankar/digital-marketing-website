@@ -1,0 +1,177 @@
+.container{
+    width: 100%;
+    margin-bottom: 5vh;
+
+    .slide{
+        width: 100%;
+        height: 110vh;
+        position: relative;
+    }
+
+    .osm{
+        background: url('../public/slides/osm.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #000000;
+        background-position: center;
+    }
+    .runbhumi{
+        background: url('../public/slides/runbhumi.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #0C0B09;
+        background-position: center;
+    }
+    .carnival{
+        background: url('../public/slides/carnival.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #0A0000;
+        background-position: center;
+    }
+    .kulfi{
+        background: url('../public/slides/kulfi.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #B0B3C4;
+        background-position: center;
+    }
+    .newpune{
+        background: url('../public/slides/newpune.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #0D0E13;
+        background-position: center;
+    }
+    .modak{
+        background: url('../public/slides/modak.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #0D0E13;
+        background-position: center;
+    }
+    .punestudio{
+        background: url('../public/slides/punestudio.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #0D0E13;
+        background-position: center;
+    }
+    .right{
+        background: url('../public/slides/right.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #6989B1;
+        background-position: center;
+    }
+    .delilah{
+        background: url('../public/slides/delilah.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #1A1E21;
+        background-position: center;
+    }
+    .promax{
+        background: url('../public/slides/promax.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #000000;
+        background-position: center;
+    }
+    .sadguru{
+        background: url('../public/slides/sadguru.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #F5CBB6;
+        background-position: center;
+    }
+    .ved{
+        background: url('../public/slides/ved.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #10060F;
+        background-position: center;
+    }
+    .jwellers{
+        background: url('../public/slides/jwellers.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #425F6A;
+        background-position: center;
+    }
+    .akrealty{
+        background: url('../public/slides/akrealty.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #FAF9FF;
+        background-position: center;
+    }
+    .tea{
+        background: url('../public/slides/tea.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #111C21;
+        background-position: center;
+    }
+    .pvg{
+        background: url('../public/slides/pvg.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #B2A191;
+        background-position: center;
+    }
+    .epb{
+        background: url('../public/slides/epb.png');
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #020305;
+        background-position: center;
+    }
+
+    @media screen and (max-width: "600px") {
+        .slide{
+            height: 60vh;
+        }
+        .osm,.runbhumi,.carnival,.kulfi,.newpune,.modak,.punestudio,.right,.delilah,.promax,.sadguru,.ved,.jwellers,.akrealty,.tea,.pvg,.epb{
+            background-attachment: scroll;
+            background-size: cover;
+        }
+    }
+    @media screen and (max-width: "460px") {
+        .slide{
+            height: 30vh;
+        }
+        .osm,.runbhumi,.carnival,.kulfi,.newpune,.modak,.punestudio,.right,.delilah,.promax,.sadguru,.ved,.jwellers,.akrealty,.tea,.pvg,.epb{
+            background-attachment: scroll;
+            background-size: contain;
+        }
+    }
+
+    @media screen and (max-width: "400px") {
+        .slide{
+            height: 23vh;
+        }
+    }
+    @media screen and (max-width: "320px") {
+        .slide{
+            height: 25vh;
+        }
+    }
+}

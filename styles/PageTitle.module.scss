@@ -1,0 +1,159 @@
+.container {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  border-bottom: 1px solid #353638;
+  border-style: dashed;
+  background: linear-gradient(10deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../public/videos/background.gif");
+  background-size: contain;
+  padding: 0 3vw 20px 12vw;
+  line-height: 1;
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 1;
+    position: relative;
+
+    p {
+      font-size: 3rem;
+      width: 100%;
+      padding-left: 5px;
+      text-transform: lowercase;
+      z-index: 1;
+      position: relative;
+      background: rgb(255, 81, 0);
+      background: linear-gradient(138deg,
+          rgba(255, 125, 0, 1) 0%,
+          rgba(253, 126, 29, 1) 50%,
+          rgba(242, 252, 69, 1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h1 {
+      font-size: 6rem;
+      width: min-content;
+      font-weight: 600;
+      text-transform: capitalize;
+      z-index: 1;
+      position: relative;
+      background: rgb(255, 81, 0);
+      background: linear-gradient(138deg,
+          rgba(255, 81, 0, 1) 0%,
+          rgba(253, 126, 29, 1) 50%,
+          rgba(242, 252, 69, 1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding-bottom: 20px;
+    }
+
+    @media screen and (max-width: "866px") {
+
+      p {
+        font-size: 2rem;
+      }
+
+      h1 {
+        font-size: 5rem;
+      }
+    }
+
+    @media screen and (max-width: "664px") {
+
+      p {
+        font-size: 2rem;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+    }
+
+    @media screen and (max-width: "533px") {
+
+      p {
+        font-size: 2rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media screen and (max-width: "490px") {
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media screen and (max-width: "398px") {
+
+      p {
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media screen and (max-width: "340px") {
+
+      p {
+        font-size: 1rem;
+      }
+
+      h1 {
+        height: 80px;
+        font-size: 2rem;
+      }
+    }
+
+    @media screen and (max-width: "300px") {
+      p {
+        font-size: 1rem;
+      }
+
+    }
+  }
+
+
+  @media screen and (max-width: "1280px") {
+    padding-left: 10vw;
+  }
+
+  @media screen and (max-width: "1024px") {
+    padding-left: 6vw;
+  }
+
+  @media screen and (max-width: "664px") {
+    height: 50vh;
+    padding-bottom: 3vh;
+  }
+
+  @media screen and (max-width: "446px") {
+    height: 45vh;
+    padding-bottom: 3vh;
+  }
+
+  @media screen and (max-width: "340px") {
+    height: 40vh;
+    padding-left: 6vw;
+    padding-bottom: 3vh;
+  }
+
+  @media screen and (max-width: "310px") {
+    height: 37vh;
+    padding-bottom: 2vh;
+  }
+}

@@ -1,0 +1,425 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .block {
+            flex: 1;
+            min-height: 60vh;
+        }
+
+        .blockOne {
+            display: flex;
+            min-height: 60vh;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: rgb(255,222,222);
+            box-shadow: 1px 1px 3px #000;
+
+            .heading {
+                font-size: 4rem;
+                letter-spacing: 0.1rem;
+                padding: 0 5vw;
+                text-transform: uppercase;
+                -webkit-text-fill-color: rgb(255, 255, 255);
+                text-shadow: 1px 1px 3px #ff0000;
+                line-height: 1;
+            }
+
+            .tagline {
+                color: #018e9b;
+                text-shadow: 0.5px 0.5px 1px #ffffff;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 20px 0;
+                width: max-content;
+                border-radius: 5px;
+                margin: 0 5vw;
+            }
+        }
+
+        .blockTwo {
+            background: rgb(255,133,81);
+            box-shadow: 1px 1px 3px #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .title {
+                font-size: 3rem;
+                letter-spacing: 0.1rem;
+                position: relative;
+                padding: 40px 0 10px 0;
+                text-transform: uppercase;
+                color: #fff;;
+                text-shadow: 1px 1px 3px #ff0000;
+                font-family: 'Lilita One', cursive;
+
+                &::before {
+                    content: "POLITICAL";
+                    position: absolute;
+                    padding: 40px 0 10px 0;
+                    top: 0;
+                    left: 0;
+                    width: 0%;
+                    letter-spacing: 0.1rem;
+                    color: #000;
+                    text-shadow: 1px 1px 3px bisque;
+                    overflow: hidden;
+                    transition: all 1s ease;
+                }
+            }
+
+            .cardDiv {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                justify-content: center;
+                align-items: center;
+                column-gap: 20px;
+
+                .cardBox {
+                    width: 200px;
+                    height: 200px;
+                    position: relative;
+
+                    .card {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        transform-style: preserve-3d;
+                        transition: all 1s ease;
+                        box-shadow: 1px 1px 3px #ff0000;
+                        border-radius: 10px;
+
+                        .front {
+                            border: 1px solid #bbb;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            backface-visibility: hidden;
+                            background: rgb(255, 255, 255);
+                            color: #353535;
+                            border-radius: 10px;
+                            padding: 20px 3vw;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            text-align: center;
+                        }
+
+                        .back {
+                            border: 1px solid #018e9b;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            backface-visibility: hidden;
+                            background-color: #C9FCFC;
+                            color: #000;
+                            border-radius: 10px;
+                            padding: 20px 3vw;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            text-align: center;
+                            transform: rotateY(180deg);
+                        }
+                    }
+
+                    &:hover {
+
+                        .card {
+                            transform: rotateY(180deg);
+                            box-shadow: 1px 1px 3px #018e9b;
+                        }
+                    }
+                }
+            }
+
+            a{
+                margin: 20px 0;
+                font-size: 16px;
+                text-transform: lowercase;
+                color: #000;
+                position: relative;
+                font-weight: 500;
+                width: fit-content;
+                background: #fff;
+                padding: 5px 15px;
+                border-radius: 10px;
+            }
+
+            &:hover{
+
+                .title{
+
+                    &::before{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .block {
+            flex: 1;
+            width: 100%;
+            min-height: 60vh;
+        }
+
+        .blockThree {
+            background-color: rgb(205, 248, 253);
+            box-shadow: 1px 1px 3px #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .title {
+                font-size: 3rem;
+                letter-spacing: 0.1rem;
+                position: relative;
+                padding: 40px 0 10px 0;
+                text-transform: uppercase;
+                color: #fff;;
+                text-shadow: 1px 1px 3px #ff0000;
+                font-family: 'Lilita One', cursive;
+
+                &::before {
+                    content: "CORPORATE";
+                    position: absolute;
+                    padding: 40px 0 10px 0;
+                    top: 0;
+                    left: 0;
+                    width: 0%;
+                    letter-spacing: 0.1rem;
+                    color: rgba(255,125,0);
+                    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+                    overflow: hidden;
+                    transition: all 1s ease;
+                }
+            }
+
+            .cardDiv {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                justify-content: center;
+                align-items: center;
+                column-gap: 20px;
+
+                .cardBox {
+                    width: 200px;
+                    height: 200px;
+                    position: relative;
+
+                    .card {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        transform-style: preserve-3d;
+                        transition: all 1s ease;
+                        box-shadow: 1px 1px 3px #ff0000;
+                        border-radius: 10px;
+
+                        .front {
+                            border: 1px solid #bbb;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            backface-visibility: hidden;
+                            background: rgb(255, 255, 255);
+                            color: #353535;
+                            border-radius: 10px;
+                            padding: 20px 3vw;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            text-align: center;
+                        }
+
+                        .back {
+                            border: 1px solid #018e9b;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            backface-visibility: hidden;
+                            background-color: rgb(255, 158, 68);
+                            color: #000;
+                            border-radius: 10px;
+                            padding: 20px 3vw;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            text-align: center;
+                            transform: rotateY(180deg);
+                        }
+                    }
+
+                    &:hover {
+
+                        .card {
+                            transform: rotateY(180deg);
+                            box-shadow: 1px 1px 3px #018e9b;
+                        }
+                    }
+                }
+            }
+
+            a{
+                margin: 20px 0;
+                font-size: 16px;
+                text-transform: lowercase;
+                color: #fff;
+                position: relative;
+                font-weight: 500;
+                width: fit-content;
+                background: rgba(255,125,0);
+                padding: 5px 15px;
+                border-radius: 10px;
+            }
+
+            &:hover{
+
+                .title{
+
+                    &::before{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .blockFour {
+            background: rgb(250,240,228);
+            box-shadow: 1px 1px 3px #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .title {
+                font-size: 3rem;
+                letter-spacing: 0.1rem;
+                position: relative;
+                padding: 40px 0 10px 0;
+                text-transform: uppercase;
+                color: #fff;;
+                text-shadow: 1px 1px 3px #ff0000;
+                font-family: 'Lilita One', cursive;
+
+                &::before {
+                    content: "EVENTS";
+                    position: absolute;
+                    padding: 40px 0 10px 0;
+                    top: 0;
+                    left: 0;
+                    width: 0%;
+                    letter-spacing: 0.1rem;
+                    color: #000;
+                    text-shadow: 1px 1px 3px bisque;
+                    overflow: hidden;
+                    transition: all 1s ease;
+                }
+            }
+
+            .cardDiv {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                justify-content: center;
+                align-items: center;
+                column-gap: 20px;
+
+                .cardBox {
+                    width: 200px;
+                    height: 200px;
+                    position: relative;
+
+                    .card {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        transform-style: preserve-3d;
+                        transition: all 1s ease;
+                        box-shadow: 1px 1px 3px #ff0000;
+                        border-radius: 10px;
+
+                        .front {
+                            border: 1px solid #bbb;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            backface-visibility: hidden;
+                            background: rgb(255, 255, 255);
+                            color: #353535;
+                            border-radius: 10px;
+                            padding: 20px 3vw;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            text-align: center;
+                        }
+
+                        .back {
+                            border: 1px solid #018e9b;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            backface-visibility: hidden;
+                            background-color: #353535;
+                            color: #fff;
+                            border-radius: 10px;
+                            padding: 20px 3vw;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            text-align: center;
+                            transform: rotateY(180deg);
+                        }
+                    }
+
+                    &:hover {
+
+                        .card {
+                            transform: rotateY(180deg);
+                            box-shadow: 1px 1px 3px #018e9b;
+                        }
+                    }
+                }
+            }
+
+            a{
+                margin: 20px 0;
+                font-size: 16px;
+                text-transform: lowercase;
+                color: #fff;
+                position: relative;
+                font-weight: 500;
+                width: fit-content;
+                background: #000;
+                padding: 5px 15px;
+                border-radius: 10px;
+            }
+
+            &:hover{
+
+                .title{
+
+                    &::before{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

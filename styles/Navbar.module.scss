@@ -1,0 +1,286 @@
+.container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+
+  .navbar {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 2vw;
+
+    .logo {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .picture {
+        position: relative;
+        width: 250px;
+        height: 90px;
+
+        img {
+          position: absolute;
+          background: transparent;
+        }
+      }
+    }
+
+    .navButton {
+      button {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+        font-size: 2rem;
+        font-weight: 600;
+        color: rgba(255, 55, 0);
+
+        span {
+          color: rgba(255, 55, 0);
+          padding: 10px;
+          background: #353638;
+        }
+      }
+    }
+
+    .navMenu {
+      width: 55%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: max-content;
+      background: #353638;
+
+      .menuContainer {
+        position: relative;
+        overflow-x: hidden;
+
+        .topDiv {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 3vw;
+
+          .menu {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: yellow;
+            width: fit-content;
+          }
+
+          button {
+            font-size: 3rem;
+            font-weight: 600;
+            color: yellow;
+            -webkit-text-fill-color: #fff;
+          }
+        }
+
+        .menuDiv {
+          padding: 2vh 3vw;
+          font-size: 22px;
+          color: #fff;
+          background-color: #353638;
+          text-transform: uppercase;
+          font-weight: 600;
+
+          li {
+            margin: 30px 0;
+            word-spacing: 5px;
+
+            &:hover {
+              color: yellow;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: "916px") {
+      .navButton {
+        button {
+          font-size: 1.5rem;
+        }
+      }
+
+      .navMenu {
+        width: 65%;
+
+        .menuContainer {
+
+          .topDiv {}
+
+          .menuDiv {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: "560px") {
+
+      .logo {
+
+        .picture {
+          width: 180px;
+          height: 60px;
+        }
+      }
+
+      .navButton {
+        button {
+          font-size: 1.5rem;
+        }
+      }
+
+      .navMenu {
+        width: 70%;
+
+        .menuContainer {
+
+          .topDiv {
+            padding: 0 2vw 0 4vw;
+          }
+
+          .menuDiv {
+            font-size: 18px;
+            padding: 2vh 3vw 2vh 5vw;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: "450px") {
+
+      .logo {
+
+        .picture {
+          width: 180px;
+          height: 60px;
+        }
+      }
+
+      .navButton {
+        button {
+          font-size: 1.5rem;
+        }
+      }
+
+      .navMenu {
+        width: 65%;
+
+        .menuContainer {
+
+          .topDiv {
+            padding-top: 20px;
+
+            .menu {
+              font-size: 2rem;
+            }
+
+            button {
+              font-size: 2rem;
+            }
+          }
+
+          .menuDiv {
+            font-size: 16px;
+            height: 100vh;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: "360px") {
+
+      .logo {
+
+        .picture {
+          width: 160px;
+          height: 60px;
+        }
+      }
+
+      .navButton {
+        button {
+          font-size: 1.2rem;
+        }
+      }
+
+      .navMenu {
+        width: 80%;
+        opacity: 0.8;
+
+        .menuContainer {
+
+          .topDiv {
+            padding-top: 10px;
+
+            .menu {
+              font-size: 2rem;
+            }
+
+            button {
+              font-size: 2rem;
+            }
+          }
+
+          .menuDiv {
+            font-size: 16px;
+            height: 100vh;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: "310px") {
+
+      .logo {
+
+        .picture {
+          width: 150px;
+          height: 60px;
+        }
+      }
+
+      .navButton {
+        button {
+          font-size: 1.2rem;
+        }
+      }
+
+      .navMenu {
+        width: 85%;
+
+        .menuContainer {
+
+          .topDiv {
+            padding-top: 10px;
+
+            .menu {
+              font-size: 2rem;
+            }
+
+            button {
+              font-size: 2rem;
+            }
+          }
+
+          .menuDiv {
+            font-size: 16px;
+            height: 100vh;
+          }
+        }
+      }
+    }
+  }
+}

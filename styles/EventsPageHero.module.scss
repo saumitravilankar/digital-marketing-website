@@ -1,0 +1,392 @@
+.container {
+  padding: 15vh 10vw 15vh 10vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
+  overflow: hidden;
+
+  .infoDiv {
+
+    .strip {
+      display: flex;
+      align-items: center;
+      gap: 2vw;
+      cursor: pointer;
+      z-index: 1;
+      position: relative;
+      overflow: hidden;
+
+      .title {
+        font-size: 4.5rem;
+        color: #353638;
+        text-transform: capitalize;
+        -webkit-text-fill-color: #353638;
+        font-weight: 600;
+        position: relative;
+
+        span {
+          font-weight: 400;
+          -webkit-text-fill-color: #ff6700;
+        }
+      }
+    }
+
+    .reverse {
+      justify-content: flex-end;
+    }
+
+    .tagline {
+      color: rgb(255, 55, 0);
+      font-weight: 400;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      z-index: 1;
+      position: relative;
+      margin: 2vh 0;
+    }
+
+    .taglineEnd {
+      text-align: end;
+    }
+
+    .data {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2vw;
+      z-index: 1;
+      position: relative;
+
+      .info {
+        flex: 2;
+        font-size: 20px;
+        color: #353638;
+      }
+
+      .infoEnd {
+        text-align: end;
+      }
+
+      .pictureDiv {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        .picture {
+          position: relative;
+          width: 400px;
+          height: 400px;
+
+          img {
+            position: absolute;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .carouselHeadings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+
+    .carouselTitle {
+      font-size: 4rem;
+      color: #353638;
+      text-transform: capitalize;
+      -webkit-text-fill-color: #353638;
+      font-weight: 600;
+
+      span {
+        font-weight: 400;
+        -webkit-text-fill-color: #ff6700;
+      }
+    }
+
+    .carouselTagline {
+      padding: 2vh 0;
+      z-index: 1;
+      color: rgb(255, 55, 0);
+      font-weight: 400;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      position: relative;
+    }
+  }
+
+  .sliderDiv {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    padding: 0 10vw;
+    
+    .pictureSlide {
+      position: relative;
+      width: 80vw;
+      height: 90vh;
+      
+      img {
+        position: absolute;
+        border: 3px solid #ff6700;
+      }
+    }
+
+  }
+
+  @media screen and (max-width: "1152px") {
+    .carouselHeadings {
+      .carouselTitle {
+        font-size: 3rem;
+      }
+
+      .carouselTagline {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: "1080px") {
+    .infoDiv {
+      .strip {
+
+        .title {
+          font-size: 3.5rem;
+        }
+      }
+
+      .data {
+
+        .info {
+          font-size: 18px;
+        }
+
+        .pictureDiv {
+          .picture {
+            width: 350px;
+            height: 350px;
+          }
+        }
+      }
+    }
+
+    .carouselHeadings {
+      .carouselTitle {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: "900px") {
+    gap: 8vh;
+
+    .infoDiv {
+      .data {
+        flex-direction: column-reverse;
+
+        .infoEnd {
+          text-align: start;
+        }
+      }
+
+      .reverse {
+        justify-content: flex-start;
+      }
+
+      .taglineEnd {
+        text-align: start;
+      }
+    }
+  }
+
+  @media screen and (max-width: "610px") {
+
+    .carouselHeadings {
+
+      .carouselTitle {
+        font-size: 3rem;
+      }
+
+      .carouselTagline {
+        font-size: 1rem;
+      }
+    }
+
+    .sliderDiv {
+      height: 50vh;
+
+      .pictureSlide {
+        height: 50vh;
+      }
+    }
+
+    .infoDiv {
+      
+      .data {
+        
+        .pictureDiv {
+          
+          .picture {
+            width: 300px;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: "550px") {
+
+    .carouselHeadings {
+
+      .carouselTitle {
+        font-size: 2.5rem;
+      }
+
+      .carouselTagline {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: "500px") {
+    .infoDiv {
+      .strip {
+        .title {
+          font-size: 3rem;
+        }
+      }
+
+      .tagline {
+        font-size: 1rem;
+      }
+
+      .data {
+        .info {
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: "450px") {
+    padding: 8vh 5vw;
+    gap: 5vh;
+
+    .infoDiv {
+      .strip {
+        .title {
+          font-size: 3rem;
+        }
+      }
+
+      .tagline {
+        font-size: 1rem;
+      }
+
+      .data {
+        .info {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .carouselHeadings {
+
+      .carouselTitle {
+        font-size: 1.6rem;
+      }
+
+      .carouselTagline {
+        font-size: 12px;
+      }
+    }
+
+    .sliderDiv {
+      height: 40vh;
+
+      .pictureSlide {
+        height: 40vh;
+        width: 80vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: "390px") {
+    padding: 5vh 7vw;
+
+    .infoDiv {
+
+      .strip {
+        .title {
+          font-size: 2rem;
+        }
+      }
+
+      .tagline {
+        font-size: 14px;
+      }
+
+      .data {
+
+        .info {
+          font-size: 12px;
+        }
+
+        .pictureDiv {
+          
+          .picture {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: "300px") {
+    padding: 5vh 7vw;
+
+    .infoDiv {
+
+      .strip {
+        .title {
+          font-size: 1.5rem;
+        }
+      }
+
+      .tagline {
+        font-size: 11px;
+      }
+
+      .data {
+
+        .info {
+          font-size: 12px;
+        }
+
+        .pictureDiv {
+
+          .picture {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+    }
+
+
+  }
+}

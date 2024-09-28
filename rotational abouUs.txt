@@ -1,0 +1,252 @@
+        <div className={style.blockDiv}>
+          <div style={{ display: "flex", alignItems: "center", gap: "4vw" }}>
+            <div className={style.block}>
+              <h1 className={style.title}>
+                {dynasticalArr.map((item, index) => {
+                  return (
+                    <span
+                      className={lilita.className}
+                      style={{
+                        transform: `rotate(${(index * 18)}deg)`,
+                      }}>
+                      {item}
+                    </span>
+                  )
+                })}
+              </h1>
+              <div className={`${style.icon}`}>
+                <Image src={'/assets/images/about.jpg'} alt="dynastical services" fill />
+                <Link href={'/corporate-solutions'} >
+                  <div className={style.overlay}>
+                    View More
+                  </div>
+                </Link>
+              </div>
+              <button>
+                <Link href={'/corporate-solutions'}>
+                  Learn More
+                </Link>
+              </button>
+            </div>
+            <div className={style.block}>
+              <h1 className={style.title}>
+                {politicalArr.map((item, index) => {
+                  return (
+                    <span className={`${style.poli} ${lilita.className}`}
+                      style={{
+                        transform: `rotate(${(index * 18)}deg)`,
+                      }}>
+                      {item}
+                    </span>
+                  )
+                })}
+              </h1>
+              <div className={`${style.icon}`}>
+                <Image src={'/assets/images/about.jpg'} alt="dynastical services" fill />
+                <Link href={'political-analysis'} >
+                  <div className={style.overlay}>
+                    View More
+                  </div>
+                </Link>
+              </div>
+              <button>
+                <Link href={'/political-analysis'}>
+                  Learn More
+                </Link>
+              </button>
+            </div>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: "4vw" }}>
+            <div className={style.block}>
+              <h1 className={`${style.title} ${style.title3}`}>
+                {evnetsArr.map((item, index) => {
+                  return (
+                    <span className={`${style.eve} ${lilita.className}`}
+                      style={{
+                        transform: `rotate(${(index * 18)}deg)`,
+                      }}>
+                      {item}
+                    </span>
+                  )
+                })}
+              </h1>
+              <div className={`${style.icon} ${lilita.className}`}>
+                <Image src={'/assets/images/about.jpg'} alt="dynastical services" fill />
+                <Link href={'events'} >
+                  <div className={style.overlay}>
+                    View More
+                  </div>
+                </Link>
+              </div>
+              <button>
+                <Link href={'/events'}>
+                  Learn More
+                </Link>
+              </button>
+            </div>
+            <div className={style.block}>
+              <h1 className={`${style.title} ${style.title3}`}>
+                {digitalArr.map((item, index) => {
+                  return (
+                    <span className={`${style.eve} ${lilita.className}`}
+                      style={{
+                        transform: `rotate(${(index * 18)}deg)`,
+                      }}>
+                      {item}
+                    </span>
+                  )
+                })}
+              </h1>
+              <div className={`${style.icon} ${lilita.className}`}>
+                <Image src={'/assets/images/about.jpg'} alt="dynastical services" fill />
+                <Link href={'/digital-marketing'} >
+                  <div className={style.overlay}>
+                    View More
+                  </div>
+                </Link>
+              </div>
+              <button>
+                <Link href={'/digital-marketing'}>
+                  Learn More
+                </Link>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        .blockDiv {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            gap: 100px;
+
+            .block {
+                width: 240px;
+                height: 240px;
+                background: rgb(255, 107, 7);
+                background: linear-gradient(15deg, rgba(255, 107, 7, 1) 47%, rgba(255, 200, 163, 1) 100%);
+                border-radius: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                box-shadow: 1px 1px 4px rgb(0, 0, 0);
+                cursor: pointer;
+
+                .icon {
+                    position: absolute;
+                    width: 160px;
+                    height: 160px;
+                    padding: 15px;
+                    border-radius: 50%;
+                    background-color: rgb(255, 242, 242);
+                    box-shadow: 0.5px 0.5px 4px rgb(0, 0, 0);
+
+                    img {
+                        border-radius: 50%;
+                    }
+
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        background: #00000075;
+                        justify-content: center;
+                        align-items: center;
+                        color: #fff;
+                        display: none;
+                        font-weight: 500;
+                    }
+                }
+
+                .title {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    animation: startRotation 15s linear infinite;
+
+                    @keyframes startRotation {
+                        0% {
+                            transform: rotate(-360deg);
+                        }
+
+                        100% {
+                            transform: rotate(0deg);
+                        }
+                    }
+
+                    span {
+                        position: absolute;
+                        font-size: 1.5rem;
+                        left: 50%;
+                        transform-origin: 0 120px;
+                        text-shadow: 0.5px 0.5px 1px #000;
+                        text-transform: uppercase;
+                        color: rgb(255, 255, 255);
+
+
+                        .poli {
+                            -webkit-text-fill-color: rgba(255, 125, 0);
+                            text-shadow: 1px 1px 1px #ff0000;
+                        }
+
+                        .eve {
+                            -webkit-text-fill-color: #FF3700;
+                            text-shadow: 1px 1px 1px #ff0000;
+                        }
+                    }
+                }
+
+                button {
+                    position: absolute;
+                    width: max-content;
+                    height: max-content;
+                    background: rgb(255, 107, 7);
+                    background: linear-gradient(15deg, rgba(255, 107, 7, 1) 47%, rgba(255, 200, 163, 1) 100%);
+                    top: 110%;
+                    padding: 10px 25px;
+                    color: rgb(255, 255, 255);
+                    border-radius: 50px;
+                    box-shadow: 1px 1px 3px #000;
+                }
+
+                &:hover {
+                    .title {
+                        animation: none;
+                        transform: rotate(290deg);
+
+                        span {
+                            color: rgba(0, 0, 0);
+                            text-shadow: 0.5px 0.5px 1px #fff;
+                        }
+                    }
+
+                    .title3 {
+                        transform: rotate(315deg);
+                    }
+
+                    .icon {
+                        .overlay {
+                            display: flex;
+                        }
+                    }
+
+                    button {
+                        color: #000;
+                    }
+                }
+            }
+
+        }

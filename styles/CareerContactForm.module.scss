@@ -1,0 +1,241 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10vh 1vw 10vh 1vw;
+  max-width: 100%;
+
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+
+    .title {
+      text-transform: capitalize;
+      font-size: 3.5rem;
+      text-align: center;
+      width: 80%;
+      -webkit-text-fill-color: #353638;
+      font-weight: 600;
+
+      span {
+        font-weight: 400;
+        -webkit-text-fill-color: rgb(255, 103, 0);
+      }
+    }
+
+    .form {
+      margin: 5vh 5vw 0 5vw;
+
+      input {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        margin: 10px 0;
+        border: 1px solid black;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+
+      select {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        margin: 10px 0;
+        border: 1px solid black;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #9ca3af;
+
+        option {
+          padding: 0 1rem;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        margin: 10px 0;
+        border: 1px solid black;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+
+      .name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        .first {
+          flex: 1;
+        }
+
+        .last {
+          flex: 1;
+        }
+      }
+
+      .submit {
+        padding: 10px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input {
+          padding: 10px;
+          width: 50%;
+          font-size: 20px;
+          background-color: #ff7a00;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    padding: 10vh 0;
+    text-align: center;
+
+    h1 {
+      font-size: 4rem;
+      -webkit-text-fill-color: #353638;
+      font-weight: 600;
+    }
+
+    .posts {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+
+      p {
+        padding: 10px 30px;
+        border: 1px solid rgba(255, 125, 0);
+        border-radius: 20px;
+        font-size: 21px;
+        font-weight: 500;
+        background: #fff;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background: #ff7a00;
+          color: #fff;
+          border: 1px solid rgba(0, 0, 0);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: "1024px") {
+    .left {
+      .title {
+        font-size: 3rem;
+      }
+
+      .form {
+        padding: 0;
+        margin: 0 4vw;
+      }
+    }
+
+    .right {
+      h1 {
+        font-size: 3rem;
+      }
+
+      .posts {
+        gap: 15px;
+
+        p {
+          padding: 8px 20px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: "800px") {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    .left {
+      padding: 0;
+
+      .title {
+        font-size: 2.5rem;
+      }
+
+      .form {
+        padding: 30px 0;
+      }
+    }
+
+    .right {
+      padding: 0;
+
+      .h1 {}
+
+      .posts{
+        padding: 0 1vw;
+        margin: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: "400px") {
+    
+    .left {
+      padding: 0;
+
+      .title {
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .form {
+        input{
+          padding: 5px 10px;
+          font-size: 1rem;
+        }
+        select{
+          padding: 5px 10px;
+          font-size: 1rem;
+        }
+        textarea{
+          padding: 5px 10px;
+          font-size: 1rem;
+        }
+
+        .submit{
+          padding: 5px 7px;
+        }
+      }
+    }
+
+    .right {
+      padding: 0;
+
+      h1 {
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .posts{
+        p{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
